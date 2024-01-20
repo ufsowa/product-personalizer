@@ -5,7 +5,6 @@ import ProductImage from '../ProductImage/ProductImage';
 import ProductForm from '../ProductForm/ProductForm';
 
 const Product = ({ basePrice, title, ...props}) => {
-  console.log('product render')
 
   const [name] = useState(props.name);
   const [color, setColor] = useState(props.colors[0]);
