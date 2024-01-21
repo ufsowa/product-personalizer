@@ -7,10 +7,13 @@ const OptionColor = ({color, setColor, colors}) => {
 
     const handleColor = (e) => {
         e.preventDefault();
+        console.log('render OptionColor fun');
         const clickedElement = e.target;
         if (clickedElement.tagName !== 'BUTTON') return;
         setColor(clickedElement.id);
     };
+
+    console.log('render Option Color:', handleColor);
 
     return(
         <ProductOption type="Color" action={handleColor}>

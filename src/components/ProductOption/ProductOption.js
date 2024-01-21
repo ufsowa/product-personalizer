@@ -2,6 +2,7 @@ import styles from './ProductOption.module.scss'
 import PropTypes from 'prop-types'
 
 const ProductOption = ({type, action, children}) => {
+    console.log('Render template:', action);
     return (
         <div className={styles.colors}>
         <h3 className={styles.optionLabel}>{type}</h3>

@@ -5,7 +5,7 @@ import Button from '../Button/Button'
 import OptionSize from '../OptionSize/OptionSize'
 import OptionColor from '../OptionColor/OptionColor'
 
-const ProductForm = ({color, size, ...props}) => {
+const ProductForm = ({color, size, sendOrder, ...props}) => {
 
     const sizes = props.sizes;
     const setSize = props.setSize;
@@ -17,7 +17,7 @@ const ProductForm = ({color, size, ...props}) => {
         <form>
             <OptionSize {...{size, setSize, sizes}} />
             <OptionColor {...{color, setColor, colors}} />
-            <Button className={styles.button} sendOrder={props.sendOrder}>
+            <Button className={styles.button} sendOrder={sendOrder}>
                 <span className="fa fa-shopping-cart" />
             </Button>
         </form>    );
